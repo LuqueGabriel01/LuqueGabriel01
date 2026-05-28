@@ -11,6 +11,20 @@ fsfds
  
 ## 🛠️ Tech Stack
 
+**Backend**
+
+![My Skills](https://skillicons.dev/icons?i=java,spring,maven,mysql,postgresql,mongodb,docker)
+
+**Frontend**
+
+![My Skills](https://skillicons.dev/icons?i=html,css,ts,angular)
+
+<br/>
+
+**Tools & Others**
+
+![My Skills](https://skillicons.dev/icons?i=git,github,kafka,linux,aws,postman)
+
 ---
 
 ## 📊 GitHub Stats
@@ -18,6 +32,7 @@ fsfds
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=LuqueGabriel01&theme=tokyonight&hide_border=true"/>
 </p>
+
 ---
 
 <p align="left">
