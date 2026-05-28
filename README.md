@@ -7,11 +7,13 @@
  
 ## 🧑‍💻 About Me
 
-Junior Backend Developer focused on building scalable and maintainable applications using Java and Spring Boot. Experienced in developing REST APIs, implementing authentication and authorization with JWT and OAuth 2.0, and working with relational and NoSQL databases such as PostgreSQL and MongoDB.
+<p align="center">
+    Junior Backend Developer focused on building scalable and maintainable applications using Java and Spring Boot. Experienced in developing REST APIs, implementing authentication and authorization with JWT and OAuth 2.0, and working with relational and NoSQL databases such as PostgreSQL and MongoDB.
 
-I have developed personal projects applying clean code principles, Docker containerization, unit testing with JUnit 5 and Mockito, and version control workflows using Git and GitHub. I have also explored other backend technologies including Node.js and .NET with C#, as well as frontend development with Angular, TypeScript, HTML, and CSS.
+    I have developed personal projects applying clean code principles, Docker containerization, unit testing with JUnit 5 and Mockito, and version control workflows using Git and GitHub. I have also explored other backend technologies including Node.js and .NET with C#, as well as frontend development with Angular, TypeScript, HTML, and CSS.
 
-I enjoy continuously learning new technologies, improving my backend development skills, and building solutions that are both efficient and reliable.
+    I enjoy continuously learning new technologies, improving my backend development skills, and building solutions that are both efficient and reliable.
+</p>
 
 ## 📚 Currently Learning
 
