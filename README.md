@@ -15,6 +15,7 @@ I enjoy continuously learning new technologies, improving my backend development
 
 ## 📚 Currently Learning
 
+|---|---|
 | ⚙️ **Microservices Architecture** | Designing and connecting distributed services |
 | 🔄 **CI/CD Pipelines** | Automating build, test and deployment workflows |
 | ☁️ **Cloud Computing** | Expanding AWS knowledge beyond EC2 & Route 53 |
