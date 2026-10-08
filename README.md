@@ -21,7 +21,6 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 - **Delivery:** containerized with Docker and Docker Compose
 - **Also:** Angular/TypeScript on the frontend side, plus Node.js and .NET/C#
 
----
 ## Projects
 
 ### [HotelApp — Hotel Reservation Platform](https://github.com/LuqueGabriel01/HotelReservationApp)
@@ -31,8 +30,6 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 [![Backend repo](https://img.shields.io/badge/Backend-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/LuqueGabriel01/HotelReservationApp)
 [![Frontend repo](https://img.shields.io/badge/Frontend-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/SihaoCheng123/InntryFront)
 
-![Java, Spring, PostgreSQL, Kafka, Redis, Docker, Angular, Maven](https://skillicons.dev/icons?i=java,maven,spring,postgresql,kafka,redis,docker,angular)
-
 **Key decisions**
 - **Single entry point:** JWT validation, routing and rate limiting live in the gateway, in one place.
 - **Database per service:** each service owns its PostgreSQL database. Trade-off: no cross-service joins.
@@ -40,6 +37,8 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 - **AI as an isolated service:** the agent service uses Google Gemini for room recommendations and a support chat, with session state in Redis, separate from the booking core.
 
 **Delivery:** Angular client consuming the gateway · GitHub Actions checks code quality and Docker builds · **Also:** Spring Security + JWT
+
+![Java, Spring, Maven, PostgreSQL, Kafka, Redis, Docker, Angular](https://skillicons.dev/icons?i=java,spring,maven,postgresql,kafka,redis,docker,angular)
 
 ---
 
@@ -50,8 +49,6 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 [![Code repo](https://img.shields.io/badge/Code-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/LuqueGabriel01/menuFlow)
 ![Next: demo frontend](https://img.shields.io/badge/Next-demo%20frontend-6B7280?style=flat-square)
 
-![Java, Spring, MySQL, Docker, Maven](https://skillicons.dev/icons?i=java,spring,mysql,docker,maven)
-
 **Key decisions**
 - **Two login paths:** staff sign in with credentials and get their real role; customers scan the table's QR and get a limited `ROLE_USER` token, with no account needed. A table can only order while its session is open.
 - **Stateless JWT with role-based access** (`ADMIN`, `CASHIER`, `CHEF`, `KITCHEN`, `USER`) enforced per endpoint.
@@ -61,6 +58,8 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 
 **Proof:** JUnit 5 + Mockito (service tests and `@WebMvcTest` controller tests) · GitHub Actions on every push/PR (tests against MySQL, Docker image build) · per-module docs and ER diagram · Swagger UI · **Also:** Spring Data JPA, Spring Security + JWT
 
+![Java, Spring, Maven, MySQL, Docker](https://skillicons.dev/icons?i=java,spring,maven,mysql,docker)
+
 ---
 
 ### [Spring Boot Chat Backend — Real-Time Chat](https://github.com/LuqueGabriel01/spring-boot-chat-backend)
@@ -69,8 +68,6 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 
 [![Code repo](https://img.shields.io/badge/Code-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/LuqueGabriel01/spring-boot-chat-backend)
 
-![Java, Spring, MongoDB, Docker, Maven](https://skillicons.dev/icons?i=java,spring,mongodb,docker,maven)
-
 **Key decisions**
 - **Documented messaging contract:** fixed destinations and topics with typed payloads, plus a client usage example in the README.
 - **Private history channel:** history is published on a per-client topic, and client ids are validated against a strict pattern.
@@ -78,6 +75,8 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 - **Configurable by environment:** allowed origins and history size.
 
 **Proof:** JUnit 5 + Mockito · Docker Compose with persistent MongoDB · health check via Spring Actuator · **Also:** WebSocket (STOMP + SockJS)
+
+![Java, Spring, Maven, MongoDB, Docker](https://skillicons.dev/icons?i=java,spring,maven,mongodb,docker)
 
 ---
 
@@ -88,8 +87,6 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 [![Code repo](https://img.shields.io/badge/Code-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/fredymcfly/Equipo-01-Proyecto-Bytes-Colaborativos)
 ![Status: in development, release expected mid-October 2026](https://img.shields.io/badge/Status-In%20development-F59E0B?style=flat-square)
 
-![Java, Spring, PostgreSQL, Docker, Maven](https://skillicons.dev/icons?i=java,spring,postgresql,docker,maven)
-
 **My contribution:** [describe here the services and areas you built]
 
 **Key decisions**
@@ -99,6 +96,8 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 - **Runs with no external APIs:** a seeder generates reproducible demo data (configurable seed and history length) on startup.
 
 **Also:** Spring Cloud Gateway · OpenFeign · Testcontainers · release expected mid-October 2026
+
+![Java, Spring, PostgreSQL, Docker](https://skillicons.dev/icons?i=java,spring,postgresql,docker)
 
 ---
 
