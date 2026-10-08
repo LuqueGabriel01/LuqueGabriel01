@@ -87,7 +87,12 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 [![Code repo](https://img.shields.io/badge/Code-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/fredymcfly/Equipo-01-Proyecto-Bytes-Colaborativos)
 ![Status: in development, release expected mid-October 2026](https://img.shields.io/badge/Status-In%20development-F59E0B?style=flat-square)
 
-**My contribution:** [describe here the services and areas you built]
+**My role: team coordination and engineering standards**
+- **Git workflow:** `dev` for integration and `main` for stable releases, one branch per task named `type/issue-number-description`, no direct commits and at least one approval from someone other than the author.
+- **Conventions:** Conventional Commits, a PR template (work performed, files changed, notes on how to test) and Javadoc rules, all documented in a team working agreement.
+- **Quality gates:** Spotless, Checkstyle (Google style) and PMD on every change, plus CI checks for code quality and Docker builds on PRs to `dev` and `main`.
+- **Organization:** each member owns a full microservice (code, tests and docs); I defined the project structure, issue tracking and onboarding steps, plus an `AGENTS.md` so AI assistants follow the same rules.
+- **My microservice:** [add the service(s) you built]
 
 **Key decisions**
 - **Centralized auth:** the JWT is issued by `ms-auth` and validated by every domain service; calls between services (OpenFeign) are authenticated with an internal key.
