@@ -16,10 +16,11 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 
 ## About Me
 
-- **Backend:** REST APIs with Java and Spring Boot, JWT and OAuth 2.0 authentication/authorization, on PostgreSQL, MySQL and MongoDB
-- **Quality:** unit tests with JUnit 5 and Mockito, static analysis and GitHub Actions workflows
-- **Delivery:** containerized with Docker and Docker Compose
-- **Also:** Angular/TypeScript on the frontend side, plus Node.js and .NET/C#
+I'm a junior developer focused on growing in backend development. I enjoy learning new things and building applications with good practices: clean code, clear structure and conventions the whole team can follow.
+
+Right now I'm digging deeper into different ways of designing and organizing code, with a special interest in software architecture. I like understanding why a design works, not only how to implement it.
+
+I'm happiest on a team where I can learn from others, share what I know and help keep the code easy to maintain.
 
 ## Projects
 
@@ -85,20 +86,18 @@ I build Java backends: secure REST APIs, event-driven microservices and real-tim
 > Team project built in a 2-week Scrum sprint: a fleet management backend with 9 microservices (vehicles, drivers, routes, maintenance, fuel, alerts and an executive dashboard).
 
 [![Code repo](https://img.shields.io/badge/Code-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/fredymcfly/Equipo-01-Proyecto-Bytes-Colaborativos)
-![Status: in development, release expected mid-October 2026](https://img.shields.io/badge/Status-In%20development-F59E0B?style=flat-square)
 
-**My role: team coordination and engineering standards**
-- **Git workflow:** `dev` for integration and `main` for stable releases, one branch per task named `type/issue-number-description`, no direct commits and at least one approval from someone other than the author.
-- **Conventions:** Conventional Commits, a PR template (work performed, files changed, notes on how to test) and Javadoc rules, all documented in a team working agreement.
-- **Quality gates:** Spotless, Checkstyle (Google style) and PMD on every change, plus CI checks for code quality and Docker builds on PRs to `dev` and `main`.
-- **Organization:** each member owns a full microservice (code, tests and docs); I defined the project structure, issue tracking and onboarding steps, plus an `AGENTS.md` so AI assistants follow the same rules.
-- **My microservice:** [add the service(s) you built]
+**My role: team lead, engineering standards and core services**
+- **Team organization:** I organized the team and agreed the way of working with each member in a kickoff meeting, then wrote the `CONTRIBUTING.md` and a short PDF guide so everyone could follow it easily.
+- **Git workflow and conventions:** `dev` for integration and `main` for stable releases, one branch per task named `type/issue-number-description`, Conventional Commits, a PR template and at least one approval from someone other than the author.
+- **Code review:** I reviewed the code written by the team and gave feedback on good and bad practices.
+- **Architecture:** I defined the layered architecture and what goes in each directory, and set up the base project structure.
+- **Quality gates:** I configured Spotless, Checkstyle (Google style) and PMD, plus CI checks for code quality and Docker builds on PRs to `dev` and `main`.
+- **AI assistants:** I added an `AGENTS.md` so AI tools follow the same rules as the team.
 
-**Key decisions**
-- **Centralized auth:** the JWT is issued by `ms-auth` and validated by every domain service; calls between services (OpenFeign) are authenticated with an internal key.
-- **Resilience:** Resilience4j on inter-service calls.
-- **Versioned schema:** PostgreSQL with Flyway migrations.
-- **Runs with no external APIs:** a seeder generates reproducible demo data (configurable seed and history length) on startup.
+**My microservices**
+- **Built:** `ms-auth`, `ms-gateway`, `ms-dashboard`, `ms-maintenance` and `ms-alerts`.
+- **Completed and improved:** finished `ms-drivers`, and improved `ms-routes`, `ms-vehicles` and `ms-fuel` (demo data seeders and code structure).
 
 **Also:** Spring Cloud Gateway · OpenFeign · Testcontainers · release expected mid-October 2026
 
