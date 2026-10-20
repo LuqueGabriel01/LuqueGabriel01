@@ -24,6 +24,36 @@ I'm happiest on a team where I can learn from others, share what I know and help
 
 ## Projects
 
+### [FleetControl — Fleet Management Platform](https://github.com/fredymcfly/Equipo-01-Proyecto-Bytes-Colaborativos)
+
+> Team project built in a 2-week Scrum sprint: a fleet management backend with 9 microservices (gateway, auth, vehicles, drivers, routes, maintenance, fuel, alerts and an executive dashboard). Runs with a single `docker compose up` and generates its own demo data.
+
+[![Code repo](https://img.shields.io/badge/Code-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/fredymcfly/Equipo-01-Proyecto-Bytes-Colaborativos)
+
+**My role: team lead, engineering standards and core services**
+- **Team organization:** I organized the team and agreed the way of working with each member in a kickoff meeting, then wrote the `CONTRIBUTING.md` and a short PDF guide so everyone could follow it easily.
+- **Git workflow and conventions:** `dev` for integration and `main` for stable releases, one branch per task named `type/issue-number-description`, Conventional Commits, a standard PR description format and at least one approval from someone other than the author.
+- **Code review:** I reviewed the code written by the team and gave feedback on good and bad practices.
+- **Architecture:** I defined the layered architecture and what goes in each directory, set up the base project structure, and wrote the Flyway migration rules.
+- **Quality gates:** I configured Spotless, Checkstyle (Google style) and PMD, plus GitHub Actions for code quality, commit lint and Docker builds on PRs to `dev` and `main`.
+
+**My microservices**
+- **Built:** `ms-auth`, `ms-gateway`, `ms-maintenance`, `ms-dashboard` and `ms-alerts`.
+- **Finished and improved:** finished `ms-drivers` and `ms-vehicles`, and improved `ms-routes` and `ms-fuel` (demo data seeders, security and resilience).
+
+**Key decisions**
+- **One identity, one internal key:** `ms-auth` issues the JWT and every domain service validates it; service-to-service calls use an internal API key that the gateway strips from external requests.
+- **Resilient service calls:** OpenFeign clients with Resilience4j circuit breakers, so one slow service doesn't take the others down.
+- **Gateway protection:** per-IP rate limiting (Caffeine), request ID tracking and a parallel health check of all downstream services.
+- **One error contract:** every service maps its exceptions to the same error response shape.
+- **Versioned schemas:** Flyway migrations with JPA in `validate` mode, so Hibernate never creates tables.
+
+**Proof:** JUnit 5 + Mockito unit tests and Testcontainers (PostgreSQL) integration tests · Swagger UI per service · deterministic demo seeder · **Also:** Spring Security + JWT, Spring Cloud Gateway, OpenFeign, Flyway
+
+![Java, Spring, Maven, PostgreSQL, Docker](https://skillicons.dev/icons?i=java,spring,maven,postgresql,docker)
+
+---
+
 ### [HotelApp — Hotel Reservation Platform](https://github.com/LuqueGabriel01/HotelReservationApp)
 
 > Hotel booking system split into 7 Spring Boot microservices behind a single API gateway. Guests search availability and book or cancel rooms with email confirmations; admins manage hotels, rooms, pricing and photos from a separate panel.
@@ -78,30 +108,6 @@ I'm happiest on a team where I can learn from others, share what I know and help
 **Proof:** JUnit 5 + Mockito · Docker Compose with persistent MongoDB · health check via Spring Actuator · **Also:** WebSocket (STOMP + SockJS)
 
 ![Java, Spring, Maven, MongoDB, Docker](https://skillicons.dev/icons?i=java,spring,maven,mongodb,docker)
-
----
-
-### [FleetControl — Fleet Management Platform](https://github.com/fredymcfly/Equipo-01-Proyecto-Bytes-Colaborativos)
-
-> Team project built in a 2-week Scrum sprint: a fleet management backend with 9 microservices (vehicles, drivers, routes, maintenance, fuel, alerts and an executive dashboard).
-
-[![Code repo](https://img.shields.io/badge/Code-repo-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/fredymcfly/Equipo-01-Proyecto-Bytes-Colaborativos)
-
-**My role: team lead, engineering standards and core services**
-- **Team organization:** I organized the team and agreed the way of working with each member in a kickoff meeting, then wrote the `CONTRIBUTING.md` and a short PDF guide so everyone could follow it easily.
-- **Git workflow and conventions:** `dev` for integration and `main` for stable releases, one branch per task named `type/issue-number-description`, Conventional Commits, a PR template and at least one approval from someone other than the author.
-- **Code review:** I reviewed the code written by the team and gave feedback on good and bad practices.
-- **Architecture:** I defined the layered architecture and what goes in each directory, and set up the base project structure.
-- **Quality gates:** I configured Spotless, Checkstyle (Google style) and PMD, plus CI checks for code quality and Docker builds on PRs to `dev` and `main`.
-- **AI assistants:** I added an `AGENTS.md` so AI tools follow the same rules as the team.
-
-**My microservices**
-- **Built:** `ms-auth`, `ms-gateway`, `ms-dashboard`, `ms-maintenance` and `ms-alerts`.
-- **Completed and improved:** finished `ms-drivers`, and improved `ms-routes`, `ms-vehicles` and `ms-fuel` (demo data seeders and code structure).
-
-**Also:** Spring Cloud Gateway · OpenFeign · Testcontainers · release expected mid-October 2026
-
-![Java, Spring, PostgreSQL, Docker](https://skillicons.dev/icons?i=java,spring,postgresql,docker)
 
 ---
 
